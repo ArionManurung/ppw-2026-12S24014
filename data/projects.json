@@ -1,0 +1,62 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Tugas Biodata Diri",
+    "category": "HTML",
+    "description": "Membuat halaman biodata diri sederhana menggunakan HTML5 semantik tanpa bantuan styling CSS. Mengedepankan struktur dokumen terstandarisasi.",
+    "icon": "bi-filetype-html",
+    "iconColor": "text-primary",
+    "thumbnail": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&auto=format&fit=crop&q=60",
+    "metrics": {
+      "complexity": "Dasar",
+      "completionTime": "3 Jam"
+    },
+    "tags": ["HTML5", "Semantic Elements", "Accessibility"],
+    "link": "#"
+  },
+  {
+    "id": "proj-2",
+    "title": "Tugas Database Kampus",
+    "category": "Database",
+    "description": "Merancang ERD dan struktur tabel terintegrasi untuk pengelolaan data mahasiswa, dosen, dan mata kuliah beserta normalisasi database.",
+    "icon": "bi-database",
+    "iconColor": "text-success",
+    "thumbnail": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&auto=format&fit=crop&q=60",
+    "metrics": {
+      "complexity": "Menengah",
+      "completionTime": "5 Jam"
+    },
+    "tags": ["ERD", "SQL", "Database Design", "Relational Model"],
+    "link": "#"
+  },
+  {
+    "id": "proj-3",
+    "title": "Styling Komponen CSS",
+    "category": "CSS",
+    "description": "Penerapan CSS murni untuk menghias tombol, skema warna, dan form interaktif menggunakan Flexbox, CSS Variables, serta spesifisitas selector.",
+    "icon": "bi-filetype-css",
+    "iconColor": "text-info",
+    "thumbnail": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=60",
+    "metrics": {
+      "complexity": "Menengah",
+      "completionTime": "4 Jam"
+    },
+    "tags": ["CSS3", "Flexbox", "CSS Variables", "Responsive"],
+    "link": "#"
+  },
+  {
+    "id": "proj-4",
+    "title": "Website Portofolio Modern",
+    "category": "Bootstrap",
+    "description": "Integrasi framework Bootstrap 5.3 untuk menghasilkan antarmuka web responsif berbasis grid 12-kolom, modal universal, dan dynamic CSR.",
+    "icon": "bi-bootstrap",
+    "iconColor": "text-warning",
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60",
+    "metrics": {
+      "complexity": "Lanjutan",
+      "completionTime": "8 Jam"
+    },
+    "tags": ["Bootstrap 5", "JavaScript ES6+", "Dynamic CSR", "REST Integration"],
+    "link": "#"
+  }
+]

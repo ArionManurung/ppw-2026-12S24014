@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portofolio - Arion Dippos Pandapotan Manurung</title>
     
     <!-- Bootstrap 5.3 CDN CSS -->
@@ -10,8 +11,8 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/custom-style.css">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70">
 
@@ -23,11 +24,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto gap-lg-2">
+                <ul class="navbar-nav ms-auto gap-lg-2 align-items-center">
                     <li class="nav-item"><a class="nav-link active" href="#hero">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portofolio">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <span id="ordersBadge" class="badge bg-success rounded-pill px-3 py-2 d-none">0 Pesanan Tersimpan</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -36,8 +41,8 @@
     <!-- Hero Section -->
     <section id="hero" class="py-5 bg-light">
         <div class="container text-center py-5">
-            <h1 class="display-4 fw-bold mb-3">Halo, Saya Arion Dippos Pandapotan Manurung</h1>
-            <p class="lead text-muted mb-4">Mahasiswa Sistem Informasi yang sedang antusias belajar pemrograman web.</p>
+            <h1 class="display-4 fw-bold mb-3">Halo, Saya <span id="heroName">Arion Dippos Pandapotan Manurung</span></h1>
+            <p id="heroBio" class="lead text-muted mb-4">Mahasiswa Sistem Informasi yang sedang antusias belajar pemrograman web.</p>
             <a href="#portofolio" class="btn btn-primary btn-lg px-4 me-md-2 shadow-sm">Lihat Portofolio</a>
             <a href="#kontak" class="btn btn-outline-secondary btn-lg px-4 shadow-sm">Hubungi Saya</a>
         </div>
@@ -48,7 +53,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <img src="profil.JPG" alt="Foto Profil Arion" class="img-fluid rounded-circle shadow">
+                    <img src="profil.JPG" alt="Foto Profil Arion" class="img-fluid rounded-circle shadow" style="width: 240px; height: 240px; object-fit: cover;">
                 </div>
                 <div class="col-md-8">
                     <h2 class="mb-3 text-primary border-bottom pb-2">Tentang Saya</h2>
@@ -56,222 +61,85 @@
                         <li class="list-group-item bg-transparent px-0"><strong>Nama:</strong> Arion Dippos Pandapotan Manurung</li>
                         <li class="list-group-item bg-transparent px-0"><strong>NIM:</strong> 12S24014</li>
                         <li class="list-group-item bg-transparent px-0"><strong>Program Studi:</strong> Sistem Informasi</li>
+                        <li class="list-group-item bg-transparent px-0"><strong>Institusi:</strong> Institut Teknologi Del</li>
                     </ul>
-                    <p>Halo! Saya adalah mahasiswa yang baru belajar HTML dan CSS selama kurang lebih 3 minggu. Saya sangat bersemangat untuk mengembangkan keterampilan saya di bidang web development. Portofolio ini adalah langkah awal saya menggunakan framework modern seperti Bootstrap 5 yang dipadukan dengan pemahaman CSS murni saya.</p>
+                    <p>Halo! Saya adalah mahasiswa Sistem Informasi di Institut Teknologi Del yang sedang mendalami web development modern. Website ini menerapkan arsitektur <strong>Decoupled Multi-Tier</strong> dengan <strong>Dynamic Client-Side Rendering (CSR)</strong> untuk menyajikan konten portofolio dan katalog layanan secara asinkron dari JSON Data Providers.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portofolio Grid & Modal Dialog -->
+    <!-- Dynamic Portofolio Grid & Filter -->
     <section id="portofolio" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5 text-primary border-bottom pb-2 d-inline-block">Portofolio Tugas</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2">
-                
-                <!-- Kartu Proyek 1 -->
-                <div class="col">
-                    <div class="card h-100 shadow-sm project-card">
-                        <div class="card-img-wrapper" style="height: 180px; background-color: #e9ecef; display:flex; align-items:center; justify-content:center;">
-                            <i class="bi bi-filetype-html display-1 text-secondary"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="badge bg-primary mb-2">HTML</span>
-                            <h5 class="card-title">Tugas Biodata Diri</h5>
-                            <p class="card-text">Membuat halaman biodata diri sederhana menggunakan HTML dasar tanpa CSS.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0 pb-3">
-                            <button type="button" class="btn btn-outline-primary w-100 btn-detail" data-bs-toggle="modal" data-bs-target="#modalProyek1">
-                                Detail Proyek
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kartu Proyek 2 -->
-                <div class="col">
-                    <div class="card h-100 shadow-sm project-card">
-                        <div class="card-img-wrapper" style="height: 180px; background-color: #e9ecef; display:flex; align-items:center; justify-content:center;">
-                            <i class="bi bi-database display-1 text-secondary"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="badge bg-success mb-2">Database</span>
-                            <h5 class="card-title">Tugas Database Kampus</h5>
-                            <p class="card-text">Merancang struktur tabel sederhana untuk database mahasiswa di kampus.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0 pb-3">
-                            <button type="button" class="btn btn-outline-primary w-100 btn-detail" data-bs-toggle="modal" data-bs-target="#modalProyek2">
-                                Detail Proyek
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Kartu Proyek 3 -->
-                <div class="col">
-                    <div class="card h-100 shadow-sm project-card">
-                        <div class="card-img-wrapper" style="height: 180px; background-color: #e9ecef; display:flex; align-items:center; justify-content:center;">
-                            <i class="bi bi-filetype-css display-1 text-secondary"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="badge bg-info text-dark mb-2">CSS</span>
-                            <h5 class="card-title">Styling Komponen CSS</h5>
-                            <p class="card-text">Penerapan CSS murni untuk menghias tombol dan form interaktif.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0 pb-3">
-                            <button type="button" class="btn btn-outline-primary w-100 btn-detail" data-bs-toggle="modal" data-bs-target="#modalProyek3">
-                                Detail Proyek
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kartu Proyek 4 -->
-                <div class="col">
-                    <div class="card h-100 shadow-sm project-card">
-                        <div class="card-img-wrapper" style="height: 180px; background-color: #e9ecef; display:flex; align-items:center; justify-content:center;">
-                            <i class="bi bi-bootstrap display-1 text-secondary"></i>
-                        </div>
-                        <div class="card-body">
-                            <span class="badge bg-warning text-dark mb-2">Bootstrap 5</span>
-                            <h5 class="card-title">Website Portofolio Modern</h5>
-                            <p class="card-text">Integrasi framework kontemporer untuk website yang responsif dan interaktif.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0 pb-3">
-                            <button type="button" class="btn btn-outline-primary w-100 btn-detail" data-bs-toggle="modal" data-bs-target="#modalProyek4">
-                                Detail Proyek
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
+            <div class="text-center mb-4">
+                <h2 class="text-primary border-bottom pb-2 d-inline-block">Portofolio Tugas</h2>
+                <p class="text-muted">Koleksi proyek yang dimuat secara asinkron via Dynamic CSR</p>
+                <!-- Filter Buttons Dinamis -->
+                <div id="projectFilterContainer" class="d-flex justify-content-center gap-2 mt-3 flex-wrap"></div>
+            </div>
+            
+            <!-- Grid Proyek (Target Dynamic Rendering JavaScript) -->
+            <div id="projectsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2">
+                <!-- Data diinjeksi via js/app.js (Loading, Success, Empty, Error) -->
             </div>
         </div>
     </section>
 
-    <!-- Modals untuk Proyek -->
-    
-    <!-- Modal Proyek 1 -->
-    <div class="modal fade" id="modalProyek1" tabindex="-1" aria-labelledby="modalProyek1Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalProyek1Label"><i class="bi bi-filetype-html me-2 text-primary"></i>Tugas Biodata Diri</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Pada tugas ini, saya belajar tentang semantik HTML dasar. Saya menggunakan tag seperti <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, dan tabel untuk menyusun data diri secara terstruktur tanpa sentuhan CSS sedikit pun.</p>
-                    <hr>
-                    <h6>Teknologi yang digunakan:</h6>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>Semantic Elements</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Proyek 2 -->
-    <div class="modal fade" id="modalProyek2" tabindex="-1" aria-labelledby="modalProyek2Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalProyek2Label"><i class="bi bi-database me-2 text-success"></i>Tugas Database Kampus</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Proyek ini menguji pemahaman awal saya tentang relasi database. Saya merancang entitas Mahasiswa, Dosen, dan Mata Kuliah beserta Primary Key dan Foreign Key mereka.</p>
-                    <hr>
-                    <h6>Teknologi yang digunakan:</h6>
-                    <ul>
-                        <li>ERD Design</li>
-                        <li>SQL Basics</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal Proyek 3 -->
-    <div class="modal fade" id="modalProyek3" tabindex="-1" aria-labelledby="modalProyek3Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalProyek3Label"><i class="bi bi-filetype-css me-2 text-info"></i>Styling Komponen CSS</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Berfokus pada pemahaman CSS Selector Spesifisitas dan Custom Properties. Ini adalah batu loncatan saya sebelum beralih ke framework modern seperti Bootstrap.</p>
-                    <hr>
-                    <h6>Teknologi yang digunakan:</h6>
-                    <ul>
-                        <li>CSS3</li>
-                        <li>Flexbox</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Proyek 4 -->
-    <div class="modal fade" id="modalProyek4" tabindex="-1" aria-labelledby="modalProyek4Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalProyek4Label"><i class="bi bi-bootstrap me-2 text-warning"></i>Website Portofolio Modern</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Proyek akhir yang membuktikan penguasaan Bootstrap 5. Saya menerapkan Grid 12-kolom responsif, form interaktif dengan floating labels, serta komponen kompleks lainnya.</p>
-                    <hr>
-                    <h6>Teknologi yang digunakan:</h6>
-                    <ul>
-                        <li>Bootstrap 5.3</li>
-                        <li>CSS Custom Overrides</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Kontak & Formulir Modern -->
-    <section id="kontak" class="py-5">
+    <!-- Katalog Layanan (Services Section) -->
+    <section id="layanan" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5 text-primary border-bottom pb-2 d-inline-block">Hubungi Saya</h2>
+            <div class="text-center mb-5">
+                <h2 class="text-primary border-bottom pb-2 d-inline-block">Katalog Layanan</h2>
+                <p class="text-muted">Paket layanan yang ditawarkan dengan integrasi pemesanan RESTful</p>
+            </div>
+            <div id="servicesContainer" class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Data diinjeksi via js/app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Universal Dynamic Modal Component (1 Modal Tunggal untuk Seluruh Proyek) -->
+    <div class="modal fade" id="universalProjectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="projectModalTitle">Judul Proyek</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4" id="projectModalBody">
+                    <!-- Konten rincian proyek diinjeksi secara dinamis via JavaScript -->
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kontak & Decoupled Asynchronous Form -->
+    <section id="kontak" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 text-primary border-bottom pb-2 d-inline-block">Hubungi & Pesan Layanan</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <form action="#" method="get" class="needs-validation" novalidate>
+                    <form id="contactForm" class="needs-validation" novalidate>
                         <div class="card shadow border-0 form-card">
                             <div class="card-body p-4 p-md-5">
                                 
                                 <div class="row g-3 mb-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingNama" placeholder="Nama Lengkap" required>
+                                            <input type="text" class="form-control" id="floatingNama" name="nama" placeholder="Nama Lengkap" required>
                                             <label for="floatingNama"><i class="bi bi-person me-1"></i> Nama Lengkap</label>
                                             <div class="invalid-feedback">Silakan masukkan nama Anda.</div>
-                                            <div class="valid-feedback">Terlihat bagus!</div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="floatingEmail" placeholder="nama@email.com" required>
+                                            <input type="email" class="form-control" id="floatingEmail" name="email" placeholder="nama@email.com" required>
                                             <label for="floatingEmail"><i class="bi bi-envelope me-1"></i> Email Aktif</label>
                                             <div class="invalid-feedback">Alamat email valid wajib disertakan.</div>
-                                            <div class="valid-feedback">Format email benar.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -279,39 +147,42 @@
                                 <div class="input-group mb-3">
                                     <span class="input-group-text bg-white"><i class="bi bi-telephone"></i></span>
                                     <div class="form-floating flex-grow-1">
-                                        <input type="tel" class="form-control border-start-0" id="floatingPhone" placeholder="Nomor HP">
+                                        <input type="tel" class="form-control border-start-0" id="floatingPhone" name="phone" placeholder="Nomor HP">
                                         <label for="floatingPhone">Nomor HP (Opsional)</label>
                                     </div>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="floatingSelect" aria-label="Kategori Pesan" required>
-                                        <option selected disabled value="">Pilih Kategori...</option>
-                                        <option value="tugas">Diskusi Tugas</option>
-                                        <option value="proyek">Kerjasama Proyek</option>
-                                        <option value="lainnya">Lainnya</option>
+                                    <select class="form-select" id="floatingSelect" name="layanan" aria-label="Kategori Pesan" required>
+                                        <option selected disabled value="">Pilih Paket Layanan / Subjek...</option>
+                                        <option value="Pengembangan Web Front-End">Pengembangan Web Front-End</option>
+                                        <option value="Desain & Optimization Database">Desain & Optimization Database</option>
+                                        <option value="Konsultasi & Audit Arsitektur Web">Konsultasi & Audit Arsitektur Web</option>
+                                        <option value="Diskusi Umum">Diskusi Umum</option>
                                     </select>
-                                    <label for="floatingSelect"><i class="bi bi-tags me-1"></i> Kategori Pesan</label>
-                                    <div class="invalid-feedback">Pilih salah satu kategori pesan.</div>
+                                    <label for="floatingSelect"><i class="bi bi-tags me-1"></i> Layanan / Subjek</label>
+                                    <div class="invalid-feedback">Pilih salah satu layanan.</div>
                                 </div>
 
                                 <div class="form-floating mb-4">
-                                    <textarea class="form-control" placeholder="Tulis pesan di sini" id="floatingTextarea" style="height: 120px" required></textarea>
-                                    <label for="floatingTextarea"><i class="bi bi-chat-text me-1"></i> Isi Pesan</label>
+                                    <textarea class="form-control" name="pesan" placeholder="Tulis pesan di sini" id="floatingTextarea" style="height: 120px" required></textarea>
+                                    <label for="floatingTextarea"><i class="bi bi-chat-text me-1"></i> Detail Permintaan / Pesan</label>
                                     <div class="invalid-feedback">Isi pesan tidak boleh kosong.</div>
                                 </div>
                                 
                                 <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <input class="form-check-input" type="checkbox" value="agreed" id="invalidCheck" required>
                                     <label class="form-check-label text-muted" for="invalidCheck">
-                                        Saya menyetujui syarat dan ketentuan layanan
+                                        Saya menyetujui syarat dan ketentuan pemrosesan data
                                     </label>
                                     <div class="invalid-feedback">
                                         Anda harus menyetujui sebelum mengirim.
                                     </div>
                                 </div>
 
-                                <button class="btn btn-primary w-100 py-3 rounded-3 fw-bold" type="submit">Kirim Pesan <i class="bi bi-send ms-2"></i></button>
+                                <button class="btn btn-primary w-100 py-3 rounded-3 fw-bold" type="submit">
+                                    Kirim Permintaan Layanan <i class="bi bi-send ms-2"></i>
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -323,28 +194,15 @@
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
-            <p class="mb-0">&copy; 2026 Arion Dippos Pandapotan Manurung - Sistem Informasi</p>
+            <p class="mb-0">&copy; 2026 Arion Dippos Pandapotan Manurung - Sistem Informasi (Decoupled Web Architecture)</p>
         </div>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Script untuk Validasi Formulir Bootstrap -->
-    <script>
-        (function () {
-            'use strict'
-            var forms = document.querySelectorAll('.needs-validation')
-            Array.prototype.slice.call(forms).forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-                    form.classList.add('was-validated')
-                }, false)
-            })
-        })()
-    </script>
+    <!-- Modular JavaScript Layer -->
+    <script src="js/api-service.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

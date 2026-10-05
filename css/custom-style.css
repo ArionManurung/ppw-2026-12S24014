@@ -1,0 +1,157 @@
+/* Custom CSS Overrides and Theming */
+
+/* Mendefinisikan Variabel CSS */
+:root {
+    --primary-brand: #0d6efd;
+    --primary-hover: #0a58ca;
+    --surface-bg: #ffffff;
+    --card-radius: 12px;
+    --shadow-lift: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+    --border-color: #dee2e6;
+    --text-main: #212529;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    background-color: #f8f9fa;
+}
+
+/* Navbar Customizations */
+.navbar {
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* Hero Section Customizations */
+#hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Project Card Micro-Interactions (Advanced Selectors) */
+.project-card {
+    background-color: var(--surface-bg);
+    border-radius: var(--card-radius);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Pseudo-class hover */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lift);
+}
+
+/* Child & Descendant combinator */
+.project-card:hover .card-title {
+    color: var(--primary-brand);
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .btn-outline-primary {
+    background-color: var(--primary-brand);
+    color: #fff;
+}
+
+/* Pseudo-element before untuk ornamen kartu */
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    height: 4px;
+    background-color: var(--primary-brand);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Button overrides tanpa !important */
+.btn-primary {
+    background-color: var(--primary-brand);
+    border-color: var(--primary-brand);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Pseudo-class :hover dan :focus-visible */
+.btn-primary:hover, 
+.btn-primary:focus-visible {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Form Styles Override */
+.form-card {
+    border-radius: var(--card-radius);
+}
+
+.form-floating > label {
+    color: var(--text-muted);
+}
+
+/* Menimpa border warna saat fokus */
+.form-control:focus, 
+.form-select:focus {
+    border-color: var(--primary-brand);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Input Group Icon Styling */
+.input-group-text {
+    background-color: var(--surface-bg);
+    border-color: var(--border-color);
+    color: var(--text-muted);
+    transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+/* Pseudo-class focus-within untuk mengubah warna icon saat input fokus */
+.input-group:focus-within .input-group-text {
+    border-color: var(--primary-brand);
+    color: var(--primary-brand);
+}
+
+/* Menghilangkan border input group saat fokus agar rapi */
+.input-group .form-control:focus {
+    border-color: var(--primary-brand);
+    box-shadow: none;
+}
+
+/* Skeleton Loading Animation */
+.skeleton {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.skeleton-text {
+    height: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skeleton-title {
+    height: 1.5rem;
+    margin-bottom: 1rem;
+    width: 70%;
+}
+
+.skeleton-img {
+    height: 180px;
+    width: 100%;
+}

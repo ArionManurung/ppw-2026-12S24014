@@ -1,0 +1,18 @@
+{
+  "name": "Arion Dippos Pandapotan Manurung",
+  "nim": "12S24014",
+  "programStudi": "Sistem Informasi",
+  "institution": "Institut Teknologi Del",
+  "bio": "Mahasiswa Sistem Informasi yang antusias mempelajari web development, software engineering, dan arsitektur web modern (Decoupled, CSR, REST API).",
+  "avatar": "profil.JPG",
+  "stats": {
+    "projectsCompleted": 8,
+    "servicesOffered": 3,
+    "satisfactionRate": "100%"
+  },
+  "socials": {
+    "github": "https://github.com/ArionManurung",
+    "linkedin": "#",
+    "email": "12s24014@students.del.ac.id"
+  }
+}

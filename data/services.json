@@ -1,0 +1,41 @@
+[
+  {
+    "id": "srv-1",
+    "title": "Pengembangan Web Front-End",
+    "description": "Pembangunan website responsif dan interaktif menggunakan HTML5, CSS3, Bootstrap 5, dan JavaScript modern (CSR).",
+    "price": "Rp 1.500.000",
+    "features": [
+      "Desain Responsif (Mobile-First)",
+      "Dynamic Client-Side Rendering",
+      "Integrasi Bootstrap 5 & Component Library",
+      "Optimasi Performa Loading & Web Vitals"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "srv-2",
+    "title": "Desain & Optimization Database",
+    "description": "Perancangan skema basis data relasional (ERD), normalisasi data, serta pembuatan kueri SQL yang efisien.",
+    "price": "Rp 2.000.000",
+    "features": [
+      "Pemodelan ERD & Relasi Tabel",
+      "Normalisasi Data 1NF-3NF",
+      "Penulisan Kueri SQL Teroptimasi",
+      "Analisis Kinerja Indeks Database"
+    ],
+    "badge": "Pro"
+  },
+  {
+    "id": "srv-3",
+    "title": "Konsultasi & Audit Arsitektur Web",
+    "description": "Analisis performa web (TTFB, FCP), audit keamanan lapis pertama (XSS & CSP), serta konsultasi arsitektur multi-tier.",
+    "price": "Rp 1.000.000",
+    "features": [
+      "Profiling Network DevTools & Caching Header",
+      "Audit Celah DOM-based XSS",
+      "Rekomendasi C4 Container Model Architecture",
+      "Dokumentasi & Laporan Audit Kinerja"
+    ],
+    "badge": "Essential"
+  }
+]
